@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="feedView"
+            type="park.hyunwoo.aiibi.ui.feed.FeedContract.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="park.hyunwoo.aiibi.ui.feed.FeedFragment"
+        android:paddingStart="@dimen/base_margin"
+        android:paddingEnd="@dimen/base_margin"
+        tools:showIn="@layout/activity_main">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+</layout>

@@ -6,5 +6,4 @@ package park.hyunwoo.aiibi.ui;
 
 public interface BaseView<T> {
 
-    void setPresenter(T presenter);
 }

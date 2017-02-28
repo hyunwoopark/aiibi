@@ -2,6 +2,8 @@ package park.hyunwoo.aiibi.di;
 
 import dagger.Module;
 import dagger.Provides;
+import park.hyunwoo.aiibi.ui.feed.FeedContract;
+import park.hyunwoo.aiibi.ui.feed.FeedPresenter;
 import park.hyunwoo.aiibi.ui.login.LoginContract;
 import park.hyunwoo.aiibi.ui.login.LoginPresenter;
 
@@ -20,5 +22,10 @@ public class AppModule {
     @Provides
     public LoginContract.Presenter provideLoginPresenter() {
         return new LoginPresenter();
+    }
+
+    @Provides
+    public FeedContract.Presenter provideFeedPresenter() {
+        return new FeedPresenter();
     }
 }
