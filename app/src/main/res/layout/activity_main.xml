@@ -31,24 +31,54 @@
         </android.support.design.widget.AppBarLayout>
 
         <RelativeLayout
-            android:layout_marginTop="?attr/actionBarSize"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize">
 
             <FrameLayout
                 android:id="@+id/content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@+id/bottom_navigation_view"/>
+                android:layout_above="@+id/bottom_navigation_view" />
 
-            <android.support.design.widget.FloatingActionButton
+            <com.github.clans.fab.FloatingActionMenu
                 android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_above="@+id/bottom_navigation_view"
-                android:layout_alignParentEnd="true"
                 android:layout_margin="@dimen/fab_margin"
-                app:srcCompat="@android:drawable/ic_dialog_email" />
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/colorPrimary"
+                app:fab_colorRipple="@color/colorPrimaryDark"
+                app:menu_fab_label="Menu label"
+                app:menu_labels_ellipsize="end"
+                app:menu_labels_singleLine="true">
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_add_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:fab_label="Add Item"
+                    app:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab_add_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:fab_label="Add Post"
+                    app:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fab3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_menu_edit"
+                    app:fab_label="Add Photo"
+                    app:fab_size="mini" />
+
+            </com.github.clans.fab.FloatingActionMenu>
 
             <android.support.design.widget.BottomNavigationView
                 android:id="@+id/bottom_navigation_view"

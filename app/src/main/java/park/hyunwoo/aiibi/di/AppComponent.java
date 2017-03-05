@@ -5,6 +5,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 import park.hyunwoo.aiibi.ui.feed.FeedFragment;
 import park.hyunwoo.aiibi.ui.login.LoginActivity;
+import park.hyunwoo.aiibi.ui.profile.ProfileFragment;
 
 /**
  * Created by Hyunwoo Park on 2/15/2017.
@@ -16,4 +17,6 @@ public interface AppComponent {
     void inject(LoginActivity loginActivity);
 
     void inject(FeedFragment feedFragment);
+
+    void inject(ProfileFragment profileFragment);
 }

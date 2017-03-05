@@ -6,6 +6,8 @@ import park.hyunwoo.aiibi.ui.feed.FeedContract;
 import park.hyunwoo.aiibi.ui.feed.FeedPresenter;
 import park.hyunwoo.aiibi.ui.login.LoginContract;
 import park.hyunwoo.aiibi.ui.login.LoginPresenter;
+import park.hyunwoo.aiibi.ui.profile.ProfileContract;
+import park.hyunwoo.aiibi.ui.profile.ProfilePresenter;
 
 /**
  * Created by Hyunwoo Park on 2/15/2017.
@@ -28,4 +30,8 @@ public class AppModule {
     public FeedContract.Presenter provideFeedPresenter() {
         return new FeedPresenter();
     }
-}
+
+    @Provides
+    public ProfileContract.Presenter provideProfilePresenter() {
+        return new ProfilePresenter();
+    }}

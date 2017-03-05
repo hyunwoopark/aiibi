@@ -50,18 +50,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:onClick="@{loginView::loginPressed}"
             android:text="@string/login"
-            android:textColor="@color/colorPrimary"
-            android:onClick="@{loginView::loginPressed}"/>
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:id="@+id/login_forgot_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:onClick="@{loginView::forgotPasswordPressed}"
             android:text="@string/forgot_password"
-            android:textColor="@color/colorPrimary"
-            android:onClick="@{loginView::forgotPasswordPressed}"/>
+            android:textColor="@color/colorPrimary" />
 
     </LinearLayout>
 </layout>

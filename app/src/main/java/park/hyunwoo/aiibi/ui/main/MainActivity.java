@@ -12,6 +12,7 @@ import park.hyunwoo.aiibi.R;
 import park.hyunwoo.aiibi.databinding.ActivityMainBinding;
 import park.hyunwoo.aiibi.ui.BaseActivity;
 import park.hyunwoo.aiibi.ui.feed.FeedFragment;
+import park.hyunwoo.aiibi.ui.profile.ProfileFragment;
 
 public class MainActivity extends BaseActivity implements MainContract.View {
 
@@ -29,6 +30,7 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         binding.setMainView(this);
         setSupportActionBar(binding.toolbar);
         setBottomNavigation();
+        binding.fab.hideMenuButton(true);
         binding.bottomNavigationView.getMenu().getItem(0).setChecked(true);
         getSupportFragmentManager()
                 .beginTransaction()
@@ -42,7 +44,8 @@ public class MainActivity extends BaseActivity implements MainContract.View {
                     Fragment fragment = selectNavigationItem(item);
                     getSupportFragmentManager()
                             .beginTransaction()
-                            .replace(R.id.content, fragment)
+                    .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)                           .
+                            replace(R.id.content, fragment, fragment.getTag())
                             .commit();
                     return true;
                 });
@@ -51,11 +54,14 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     private Fragment selectNavigationItem(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_feed:
+                binding.fab.hideMenuButton(true);
                 return FeedFragment.newInstance();
             case R.id.action_browse:
+                binding.fab.hideMenuButton(true);
                 return FeedFragment.newInstance();
             case R.id.action_profile:
-                return FeedFragment.newInstance();
+                binding.fab.showMenuButton(true);
+                return ProfileFragment.newInstance();
             default:
                 return FeedFragment.newInstance();
         }
