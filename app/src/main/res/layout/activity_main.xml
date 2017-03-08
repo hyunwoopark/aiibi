@@ -16,24 +16,9 @@
         android:fitsSystemWindows="true"
         tools:context="park.hyunwoo.aiibi.ui.main.MainActivity">
 
-        <android.support.design.widget.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:theme="@style/AppTheme.AppBarOverlay">
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-        </android.support.design.widget.AppBarLayout>
-
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="?attr/actionBarSize">
+            android:layout_height="match_parent">
 
             <FrameLayout
                 android:id="@+id/content"
@@ -47,10 +32,10 @@
                 android:layout_height="match_parent"
                 android:layout_above="@+id/bottom_navigation_view"
                 android:layout_margin="@dimen/fab_margin"
-                app:fab_colorNormal="@color/colorAccent"
-                app:fab_colorPressed="@color/colorPrimary"
-                app:fab_colorRipple="@color/colorPrimaryDark"
-                app:menu_fab_label="Menu label"
+                app:menu_colorNormal="@color/colorPrimary"
+                app:menu_colorPressed="@color/colorPrimaryDark"
+                app:menu_colorRipple="@color/colorAccent"
+                app:menu_fab_label="Add something"
                 app:menu_labels_ellipsize="end"
                 app:menu_labels_singleLine="true">
 
@@ -59,6 +44,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@android:drawable/ic_menu_edit"
+                    app:fab_colorNormal="@color/colorPrimary"
+                    app:fab_colorPressed="@color/colorPrimaryDark"
+                    app:fab_colorRipple="@color/colorAccent"
                     app:fab_label="Add Item"
                     app:fab_size="mini" />
 
@@ -67,6 +55,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@android:drawable/ic_menu_edit"
+                    app:fab_colorNormal="@color/colorPrimary"
+                    app:fab_colorPressed="@color/colorPrimaryDark"
+                    app:fab_colorRipple="@color/colorAccent"
                     app:fab_label="Add Post"
                     app:fab_size="mini" />
 
@@ -75,6 +66,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@android:drawable/ic_menu_edit"
+                    app:fab_colorNormal="@color/colorPrimary"
+                    app:fab_colorPressed="@color/colorPrimaryDark"
+                    app:fab_colorRipple="@color/colorAccent"
                     app:fab_label="Add Photo"
                     app:fab_size="mini" />
 
@@ -82,6 +76,7 @@
 
             <android.support.design.widget.BottomNavigationView
                 android:id="@+id/bottom_navigation_view"
+                style="@style/botton_nav_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"

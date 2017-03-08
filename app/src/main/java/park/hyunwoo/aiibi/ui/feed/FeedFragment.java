@@ -67,7 +67,6 @@ public class FeedFragment extends BaseFragment implements FeedContract.View {
     }
 
 
-
     @Override
     public void showFeed(List<FeedPost> feedPosts) {
         binding.recyclerview.setAdapter(new FeedAdapter(feedPosts));

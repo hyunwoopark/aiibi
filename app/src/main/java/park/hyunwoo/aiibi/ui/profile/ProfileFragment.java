@@ -47,6 +47,10 @@ public class ProfileFragment extends BaseFragment implements ProfileContract.Vie
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false);
         View view = binding.getRoot();
         binding.setProfileView(this);
+//        Glide.with(this)
+//                .load("https://www.placecage.com/200/300")
+//                .centerCrop()
+//                .into(binding.profilePicture);
         return view;
     }
 

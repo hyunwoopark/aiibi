@@ -28,9 +28,8 @@ public class MainActivity extends BaseActivity implements MainContract.View {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setMainView(this);
-        setSupportActionBar(binding.toolbar);
+//        setSupportActionBar(binding.toolbar);
         setBottomNavigation();
-        binding.fab.hideMenuButton(true);
         binding.bottomNavigationView.getMenu().getItem(0).setChecked(true);
         getSupportFragmentManager()
                 .beginTransaction()
@@ -54,13 +53,13 @@ public class MainActivity extends BaseActivity implements MainContract.View {
     private Fragment selectNavigationItem(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_feed:
-                binding.fab.hideMenuButton(true);
+                binding.fab.showMenuButton(true);
                 return FeedFragment.newInstance();
             case R.id.action_browse:
                 binding.fab.hideMenuButton(true);
                 return FeedFragment.newInstance();
             case R.id.action_profile:
-                binding.fab.showMenuButton(true);
+                binding.fab.hideMenuButton(true);
                 return ProfileFragment.newInstance();
             default:
                 return FeedFragment.newInstance();

@@ -17,8 +17,8 @@ public class LoginActivity extends BaseActivity implements LoginContract.View {
 
     @Inject
     LoginContract.Presenter loginPresenter;
-
     private ActivityLoginBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

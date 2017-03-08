@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -13,9 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context="park.hyunwoo.aiibi.ui.feed.FeedFragment"
-        android:paddingStart="@dimen/base_margin"
-        android:paddingEnd="@dimen/base_margin"
         tools:showIn="@layout/activity_main">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerview"
