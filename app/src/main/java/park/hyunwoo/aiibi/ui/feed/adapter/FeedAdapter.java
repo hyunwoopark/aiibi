@@ -17,7 +17,7 @@ import park.hyunwoo.aiibi.model.FeedPost;
 
 public class FeedAdapter extends RecyclerView.Adapter<FeedViewHolder> {
 
-    List<FeedPost> feedPosts;
+    private List<FeedPost> feedPosts;
 
     public FeedAdapter(List<FeedPost> feedPosts) {
         this.feedPosts = feedPosts;

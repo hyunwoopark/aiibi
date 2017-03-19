@@ -1,5 +1,8 @@
 package park.hyunwoo.aiibi.ui.profile;
 
+import java.util.List;
+
+import park.hyunwoo.aiibi.model.Artifact;
 import park.hyunwoo.aiibi.ui.BasePresenter;
 
 /**
@@ -9,6 +12,7 @@ import park.hyunwoo.aiibi.ui.BasePresenter;
 public interface ProfileContract {
 
     interface View {
+        void showCollections(List<Artifact> artifacts);
     }
 
     interface Presenter extends BasePresenter {
@@ -16,5 +20,7 @@ public interface ProfileContract {
         void attachView(View view);
 
         void dettachView();
+
+        void getUserCollection();
     }
 }

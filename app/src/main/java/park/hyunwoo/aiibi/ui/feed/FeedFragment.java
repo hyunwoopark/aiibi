@@ -4,7 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,17 +52,18 @@ public class FeedFragment extends BaseFragment implements FeedContract.View {
         View view = binding.getRoot();
         binding.setFeedView(this);
         setupRecyclerView();
+        ((AppCompatActivity) getActivity()).setSupportActionBar(binding.toolbar);
         return view;
     }
 
     private void setupRecyclerView() {
-        binding.recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
+//        binding.recyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        setTitle(R.string.title_faded);
+        binding.toolbar.setTitle(R.string.title_faded);
         feedPresenter.fetchFeed();
     }
 
